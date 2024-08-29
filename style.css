@@ -1,0 +1,118 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  .box {
+    width: fit-content;
+    span {
+      cursor: pointer;
+      display: flex;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border: 1.5px solid #ddd;
+      margin-bottom: 5px;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 31px;
+      transition-duration: .3s;
+      &:hover{
+        /* border-color: #12d812; */
+      }
+      &:active {
+        background-color: #d1d1d1;
+        background-color: #12d812;
+      }
+    }
+  }
+}
+p {
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  font-weight: bold;
+  margin: 20px auto;
+  font-size: 20px;
+  q { /* Not Real Element But For Nothing! */
+    border-radius: 5px;
+    margin-left: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,
+    &::after {
+      content: '';
+    }
+  }
+}
+
+h3 {
+  width: fit-content;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  transition-duration: .3s;
+  color: white;
+  &.winning-msg {
+    display: none;
+    background-color: orange;
+    .btn {
+      margin-top: 10px;
+      color: #00f000;
+    }
+  }
+  &.no-win {
+    display: none;
+    background-color: rgba(255, 0, 0, 0.90);
+  }
+  .btn {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    font-weight: bolder;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    &:hover {
+      background-color: #ffffffdc;
+    }
+  }
+  span.winner {
+    background-color: #00f000;
+    padding: 7px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width:767px) {
+  h3 {
+    line-height: 2;
+  }
+}
